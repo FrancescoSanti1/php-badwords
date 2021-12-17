@@ -8,9 +8,11 @@
 </head>
 <body>
     <?php
-        $stringa = "Questo è il paragrafo da stampare" 
+        $myString = "Questo è il paragrafo da stampare";
+        $censored = $_GET["word"]; 
+        $censoredString = str_replace($censored, '***', $myString);
     ?>
-    <p><?php echo $stringa ?></p>
-    <p>Lunghezza del paragrafo: <?php echo strlen($stringa) ?></p>
+    <p><?php echo $censoredString ?></p>
+    <p>Lunghezza del paragrafo: <?php echo strlen($myString) ?></p>
 </body>
 </html>
